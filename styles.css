@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2em;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.chevron {
+    margin-left: 0.5em;
+}
+
+.login-btn {
+    background-color: #9370DB;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 4px;
+}
+
+.login-btn:hover {
+    background-color: #836FFF;
+}
+
+.breadcrumb {
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1em;
+    gap: 2em;
+}
+
+.toc {
+    flex: 0 0 auto;
+    min-width: 200px;
+    background-color: #f5f5f5;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.toc h3 {
+    margin-top: 0;
+}
+
+.toc-item {
+    margin-bottom: 1em;
+    font-size: 1em;
+}
+
+.content {
+    flex: 3;
+    min-width: 300px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #333;
+    color: white;
+    margin-top: auto;
+}
+
+.footer-content ul {
+    list-style: none;
+}
+
+/* Media Query for screens smaller than 600px (Mobile) */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1em;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+    .login-btn {
+        margin-top: 1em;
+    }
+
+    main {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .toc {
+        min-width: unset;
+        margin-bottom: 1em;
+    }
+
+    .content {
+        flex: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Media Query for screens between 600px and 1024px (iPad Pro) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .navbar {
+        padding: 0.5em;
+    }
+
+    .nav-links {
+        gap: 1em;
+    }
+
+    .login-btn {
+        padding: 0.3em 0.7em;
+        font-size: 0.9em;
+    }
+
+    .breadcrumb {
+        padding: 0.8em;
+    }
+
+    main {
+        padding: 0.5em;
+        gap: 1em;
+    }
+
+    .toc {
+        min-width: 180px;
+        padding: 0.8em;
+    }
+
+    .toc-item {
+        font-size: 0.9em;
+    }
+
+    .footer-content {
+        padding: 0.8em;
+    }
+}
